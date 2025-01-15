@@ -1,22 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './EconomyPage.css';
 
-const years = [2020, 2021, 2022, 2023, 2024, 2025];
-
 const EconomyPage = () => {
-  const [data, setData] = useState(
-    years.map((year) => ({
-      year,
-      gdp: '',
-      gdpPerCapita: '',
-    }))
-  );
+  const [data, setData] = useState([]);
 
-  const handleInputChange = (index, field, value) => {
-    const updatedData = [...data];
-    updatedData[index][field] = value;
-    setData(updatedData);
-  };
+  // Fetch dữ liệu từ API
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:5000/api/gdp'); // URL của backend
+        const result = await response.json();
+        // Chuyển dữ liệu từ API thành state phù hợp
+        const formattedData = result.map((row) => ({
+          year: row.year,
+          gdp: row.gdp,
+          gdpPerCapita: row.gdp_per_capita,
+        }));
+        setData(formattedData);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+    fetchData();
+  }, []);
 
   return (
     <div className="economy-page">
@@ -30,29 +36,11 @@ const EconomyPage = () => {
           </tr>
         </thead>
         <tbody>
-          {data.map((row, index) => (
+          {data.map((row) => (
             <tr key={row.year}>
               <td>{row.year}</td>
-              <td>
-                <input
-                  type="number"
-                  placeholder="GDP"
-                  value={row.gdp}
-                  onChange={(e) =>
-                    handleInputChange(index, 'gdp', e.target.value)
-                  }
-                />
-              </td>
-              <td>
-                <input
-                  type="number"
-                  placeholder="GDP Bình quân"
-                  value={row.gdpPerCapita}
-                  onChange={(e) =>
-                    handleInputChange(index, 'gdpPerCapita', e.target.value)
-                  }
-                />
-              </td>
+              <td>{row.gdp}</td>
+              <td>{row.gdpPerCapita}</td>
             </tr>
           ))}
         </tbody>
