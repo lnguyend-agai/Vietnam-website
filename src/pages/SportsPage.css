@@ -1,43 +1,53 @@
 .sports-page {
-    padding: 20px;
-  }
-  
-  h1 {
-    text-align: center;
-  }
-  
-  .expander {
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    overflow: hidden;
-  }
-  
-  .expander input[type="checkbox"] {
-    display: none;
-  }
-  
-  .expander label {
-    display: block;
-    background-color: #f4f4f4;
-    padding: 10px;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  
-  .expander .content {
-    display: none;
-    padding: 10px;
-    background-color: #fff;
-  }
-  
-  .expander input[type="checkbox"]:checked + label + .content {
-    display: block;
-  }
-  
-  .expander img {
-    max-width: 100%;
-    margin-top: 10px;
-    border-radius: 5px;
-  }
-  
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.expander {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.expander input[type="checkbox"] {
+  display: none;
+}
+
+.expander label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4f4f4;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.expander .arrow {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.expander input[type="checkbox"]:checked + label .arrow {
+  transform: rotate(180deg); /* Xoay mũi tên lên */
+}
+
+.expander .content {
+  display: none;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.expander input[type="checkbox"]:checked + label + .content {
+  display: block;
+}
+
+.expander img {
+  max-width: 100%;
+  margin-top: 10px;
+  border-radius: 5px;
+}
