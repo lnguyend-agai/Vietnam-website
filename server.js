@@ -23,7 +23,6 @@ app.get('/', (req, res) => {
   res.send('Welcome to the GDP API server!');
 });
 
-
 // API để lấy dữ liệu từ bảng GDP
 app.get('/api/gdp', async (req, res) => {
   try {
