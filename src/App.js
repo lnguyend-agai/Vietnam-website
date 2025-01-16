@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import EconomyPage from './pages/EconomyPage';
 import SportsPage from './pages/SportsPage';
+import MusicPage from './pages/MusicPage';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         {/* Route cho trang EconomyPage */}
         <Route path="/economy" element={<EconomyPage />} />
         <Route path="/sports" element={<SportsPage />} />
+        <Route path="/music" element={<MusicPage />} />
       </Routes>
     </Router>
   );

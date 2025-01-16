@@ -30,6 +30,12 @@ const Categories = () => {
               <h3>{category.name}</h3>
               <p>{category.description}</p>
             </Link>
+          ) : category.id === 'music' ? (
+            <Link to="/music">
+              <img src={category.img} alt={category.name} />
+              <h3>{category.name}</h3>
+              <p>{category.description}</p>
+            </Link>
           ) : (
             <>
               <img src={category.img} alt={category.name} />

@@ -1,0 +1,64 @@
+.music-page {
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .expander {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .expander input[type="checkbox"] {
+    display: none;
+  }
+  
+  .expander label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .expander .arrow {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .expander input[type="checkbox"]:checked + label .arrow {
+    transform: rotate(180deg); /* Xoay mũi tên lên */
+  }
+  
+  .expander .content {
+    display: none;
+    padding: 10px;
+    background-color: #fff;
+  }
+  
+  .expander input[type="checkbox"]:checked + label + .content {
+    display: block;
+  }
+  
+  .youtube-link {
+    margin-bottom: 10px;
+  }
+  
+  .youtube-link a {
+    color: #1a73e8;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .youtube-link a:hover {
+    text-decoration: underline;
+  }
+  
