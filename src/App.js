@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import EconomyPage from './pages/EconomyPage';
 import SportsPage from './pages/SportsPage';
 import MusicPage from './pages/MusicPage';
+import TravelPage from './pages/TravelPage';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/economy" element={<EconomyPage />} />
         <Route path="/sports" element={<SportsPage />} />
         <Route path="/music" element={<MusicPage />} />
+        <Route path="/tourism" element={<TravelPage />} />
       </Routes>
     </Router>
   );

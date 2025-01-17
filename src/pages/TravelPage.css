@@ -1,0 +1,54 @@
+.travel-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  .regions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .region {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .region:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .region img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .region-info {
+    padding: 15px;
+  }
+  
+  .region-info h2 {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+    color: #444;
+  }
+  
+  .region-info p {
+    margin: 0;
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+  }
+  

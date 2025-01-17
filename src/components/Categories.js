@@ -36,6 +36,12 @@ const Categories = () => {
               <h3>{category.name}</h3>
               <p>{category.description}</p>
             </Link>
+          ) : category.id === 'tourism' ? (
+            <Link to="/tourism">
+              <img src={category.img} alt={category.name} />
+              <h3>{category.name}</h3>
+              <p>{category.description}</p>
+            </Link>
           ) : (
             <>
               <img src={category.img} alt={category.name} />
