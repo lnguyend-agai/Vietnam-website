@@ -13,10 +13,6 @@ h1 {
   overflow: hidden;
 }
 
-.expander input[type="checkbox"] {
-  display: none;
-}
-
 .expander label {
   display: flex;
   justify-content: space-between;
@@ -32,18 +28,13 @@ h1 {
   transition: transform 0.3s ease;
 }
 
-.expander input[type="checkbox"]:checked + label .arrow {
+.expander .arrow.open {
   transform: rotate(180deg); /* Xoay mũi tên lên */
 }
 
 .expander .content {
-  display: none;
   padding: 10px;
   background-color: #fff;
-}
-
-.expander input[type="checkbox"]:checked + label + .content {
-  display: block;
 }
 
 .expander img {
