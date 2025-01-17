@@ -5,21 +5,21 @@ const musicData = [
   {
     title: 'Anh Trai Say Hi',
     links: [
-      'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-      'https://www.youtube.com/watch?v=3JZ_D3ELwOQ',
+      'https://www.youtube.com/watch?v=fNT6AnU2ax4',
+      'https://www.youtube.com/watch?v=lwNiHFazaK4',
     ],
   },
   {
     title: 'Anh Trai Vượt Ngàn Chông Gai',
     links: [
-      'https://www.youtube.com/watch?v=2Vv-BfVoq4g',
-      'https://www.youtube.com/watch?v=fJ9rUzIMcZQ',
+      'https://www.youtube.com/watch?v=nXiwlKJSkHY',
+      'https://www.youtube.com/watch?v=_lIu6T3Bp2I',
     ],
   },
   {
     title: 'Ca Sĩ Giấu Mặt',
     links: [
-      'https://www.youtube.com/watch?v=QH2-TGUlwu4',
+      'https://www.youtube.com/watch?v=5viCJm5lS-M',
     ],
   },
 ];
